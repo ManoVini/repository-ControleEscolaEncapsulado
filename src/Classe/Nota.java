@@ -2,6 +2,8 @@ package Classe;
 
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 public class Nota {
     private Double n1;
     private Double n2;
@@ -27,32 +29,52 @@ public class Nota {
     public Double setN1() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserir nota N1: ");
-        Double n1Scanner = scanner.nextDouble();
+        double n1Scanner = scanner.nextDouble();
         System.out.println();
-        return n1Scanner;
+
+        if(n1Scanner < 0){
+            System.out.println("ERRO: Nota N1 invalida");
+            exit(1);
+        }
+        return n1 = n1Scanner;
     }
 
     public Double setN2() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserir nota N2: ");
-        Double n2Scanner = scanner.nextDouble();
+        double n2Scanner = scanner.nextDouble();
         System.out.println();
-        return n2Scanner;
+
+        if(n2Scanner < 0){
+            System.out.println("ERRO: Nota N2 invalida");
+            exit(1);
+        }
+        return n2 = n2Scanner;
     }
 
     public Double setN3() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserir nota N3: ");
-        Double n3Scanner = scanner.nextDouble();
+        double n3Scanner = scanner.nextDouble();
         System.out.println();
-        return n3Scanner;
+
+        if(n3Scanner < 0){
+            System.out.println("ERRO: Nota N3 invalida");
+            exit(1);
+        }
+        return n3 = n3Scanner;
     }
 
     public Double setAp() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserir nota AP: ");
-        Double apScanner = scanner.nextDouble();
+        double apScanner = scanner.nextDouble();
         System.out.println();
-        return apScanner;
+
+        if(apScanner < 0){
+            System.out.println("ERRO: Nota AP invalida");
+            exit(1);
+        }
+        return ap = apScanner;
     }
 }

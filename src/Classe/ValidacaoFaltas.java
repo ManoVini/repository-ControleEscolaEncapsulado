@@ -1,21 +1,25 @@
 package Classe;
 
+import static java.lang.System.exit;
+
 public class ValidacaoFaltas {
-    private Boolean statusAprovacao;
+    private Boolean statusFalta;
 
-    public Boolean getStatusAprovacao() {
-        return statusAprovacao;
-    }
-
-    public Boolean setStatusAprovacao(Integer faltaAluno) {
+    public Boolean setStatusFalta(Integer faltaAluno, String nomeAluno) {
+        //reprovado
         if(faltaAluno > 10){
-            //reprovado
-            statusAprovacao = false;
-        }else{
-            //aprovado
-            statusAprovacao = true;
-        }
+            System.out.println("-------------------------------------------------------");
+            System.out.println("Aluno " + nomeAluno + " REPROVADO por falta.");
+            System.out.println("Tolerancia de faltas: 10");
+            System.out.println("Total faltas do aluno: " + faltaAluno);
+            System.out.println("-------------------------------------------------------");
 
-        return statusAprovacao;
+            exit(1);
+            statusFalta = false;
+        }else{
+            //dentro do limite de falta
+            statusFalta = true;
+        }
+        return statusFalta;
     }
 }

@@ -1,4 +1,4 @@
-package Metodo;
+package Classe;
 
 import Classe.Aluno;
 import Classe.MediaNota;
@@ -20,56 +20,32 @@ public class Main {
 
         // Verifica limite faltas
         ValidacaoFaltas validacaoFaltas = new ValidacaoFaltas();
-//        validacaoFaltas.setStatusAprovacao(aluno.getFalta());
-//        if(validacaoFaltas.getStatusAprovacao() == false){
-//            System.out.println("-------------------------------------------------------");
-//            System.out.println("Aluno " + aluno.getNome() + " REPROVADO por falta.");
-//            System.out.println("Tolerancia de faltas: 10");
-//            System.out.println("Total faltas do aluno: " + aluno.getFalta());
-//            System.out.println("-------------------------------------------------------");
-//
-//            exit(1);
-//        }
+        validacaoFaltas.setStatusFalta(aluno.getFalta(), aluno.getNome());
 
         //Inserindo notas
         Nota notaN1 = new Nota();
         Nota notaN2 = new Nota();
         Nota notaAP = new Nota();
 
+        //Inserindo notas iniciais do aluno
         notaN1.setN1();
-        if(notaN1.getN1() == null){
-            System.out.println("ERRO: Nota N1 invalida");
-            exit(1);
-        }
-
         notaN2.setN2();
-        if(notaN2.getN2() == null){
-            System.out.println("ERRO: Nota N2 invalida");
-            exit(1);
-        }
-
         notaAP.setAp();
-        if(notaAP.getAp() == null){
-            System.out.println("ERRO: Nota AP invalida");
-            exit(1);
-        }
 
         // Realiza media do aluno
         MediaNota mediaNota = new MediaNota();
         mediaNota.setRealizaMedia(notaN1.getN1(), notaN2.getN2(), notaAP.getAp());
-        if(mediaNota.getMedia() < NOTA_MINIMA){
+
+        //Caso media esteja abaixo, inserir nota N3 e recalcular media
+        if(mediaNota.getMedia() < NOTA_MINIMA) {
             System.out.println("Necessario N3");
 
             Nota notaN3 = new Nota();
+            //Insere nota N3
             notaN3.setN3();
 
-            if(notaN3.getN3() == null){
-                System.out.println("ERRO: Nota N3 invalida");
-                exit(1);
-            }
-
+            //Recalcula media
             mediaNota.setRealizaMediaComN3(notaN1.getN1(), notaN3.getN3());
-
             if(mediaNota.getMedia() < NOTA_MINIMA){
                 System.out.println("-------------------------------------------------------");
                 System.out.println("Aluno " + aluno.getNome() + " REPROVADO por nota.");

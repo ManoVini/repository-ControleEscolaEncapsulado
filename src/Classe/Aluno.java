@@ -28,25 +28,21 @@ public class Aluno {
             System.out.println("ERRO: Nome invalido");
             exit(1);
         }
-
         return nome;
     }
 
     public Integer setFalta() {
-        String faltaNull;
-
         Scanner scanner = new Scanner(System.in);
         System.out.print("Insira a falta do Aluno: ");
-        Integer faltaScanner = scanner.nextInt();
+        int faltaScanner = scanner.nextInt();
         System.out.println();
         falta = faltaScanner;
 
-        // TODO: apenas dados numericos inputados
-        if(falta <= 0){
+        // Validação do campo falta
+        if(falta <= 0 || falta > 22){
             System.out.println("ERRO: Falta invalida");
             exit(1);
         }
-
         return falta;
     }
 }
