@@ -1,15 +1,15 @@
 # repository-ControleEscolarEncapsulado
 
-Objetivo:
+Objetivo: 
 Realizer controle de nota e falta de um aluno, informando se foi APROVADO ou REPROVADO.
 
-Maneira de trabalho do código:
+Maneira de trabalho do código: 
 Iput de dados via biblioteca java.util.Scanner, o programa trabalha em cima dos dados colocado pelo usuário.
 
-Adendos:
-Reprovação por falta - Valor acima de 10.
-Reprovação por nota - Valor abaixo de 6,0.
+Adendos: 
+Reprovação por falta, valor acima de 10.
+Reprovação por nota, valor abaixo de 6,0.
 
-Correções futuras de bugs:
-1- Bloquear letras inputadas em campos númericos.
+Correções futuras de bugs: 
+1- Bloquear letras inputadas em campos númericos. 
 2- Quando campos númericos estiverem vazios ao dar o input, realizar mensagem de erro. 
