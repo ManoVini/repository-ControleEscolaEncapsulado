@@ -4,7 +4,7 @@ Objetivo:
 Realizer controle de nota e falta de um aluno, informando se foi APROVADO ou REPROVADO.
 
 Maneira de trabalho do código: 
-Iput de dados via biblioteca java.util.Scanner, o programa trabalha em cima dos dados colocado pelo usuário.
+Input de dados via biblioteca java.util.Scanner, o programa trabalha em cima dos dados colocado pelo usuário.
 
 Adendos: 
 Reprovação por falta, valor acima de 10.
