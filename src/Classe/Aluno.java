@@ -39,7 +39,7 @@ public class Aluno {
         falta = faltaScanner;
 
         // Validação do campo falta
-        if(falta <= 0 || falta > 22){
+        if(falta < 0 || falta > 22){
             System.out.println("ERRO: Falta invalida");
             exit(1);
         }

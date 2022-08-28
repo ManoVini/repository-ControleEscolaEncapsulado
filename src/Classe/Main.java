@@ -1,10 +1,5 @@
 package Classe;
 
-import Classe.Aluno;
-import Classe.MediaNota;
-import Classe.Nota;
-import Classe.ValidacaoFaltas;
-
 import static java.lang.System.exit;
 
 public class Main {
@@ -64,3 +59,5 @@ public class Main {
         System.out.println("-------------------------------------------------------");
     }
 }
+
+// TODO: Adicionar herança
