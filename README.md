@@ -1,7 +1,7 @@
 # repository-ControleEscolarEncapsulado
 
 Objetivo: 
-Realizer controle de nota e falta de um aluno, informando se foi APROVADO ou REPROVADO.
+Realizar controle de nota e falta de um aluno, informando se foi APROVADO ou REPROVADO.
 
 Maneira de trabalho do código: 
 Input de dados via biblioteca java.util.Scanner, o programa trabalha em cima dos dados colocado pelo usuário.
